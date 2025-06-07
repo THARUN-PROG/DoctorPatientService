@@ -1,4 +1,4 @@
-package com.hcltech.doctorPatientService.dto;
+package com.hcltech.DoctorPatientService.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
