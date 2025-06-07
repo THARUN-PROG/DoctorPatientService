@@ -1,4 +1,4 @@
-package com.hcltech.doctorPatientService.model;
+package com.hcltech.DoctorPatientService.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
