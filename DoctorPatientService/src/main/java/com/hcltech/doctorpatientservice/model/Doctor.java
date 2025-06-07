@@ -13,14 +13,13 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Doctor {
-
-
     @Id
+    @Column(name="doctor_id")
     private UUID doctorId;
 
     @OneToOne
     @MapsId
-    @JoinColumn(name = "doctorId")
+    @JoinColumn(name = "doctor_id")
     private User user;
 
     private String experience;
