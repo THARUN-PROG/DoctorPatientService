@@ -1,8 +1,8 @@
-package com.hcltech.doctorPatientService.controller;
+package com.hcltech.DoctorPatientService.controller;
 
 
-import com.hcltech.doctorPatientService.dto.SpecializationDto;
-import com.hcltech.doctorPatientService.service.SpecializationService;
+import com.hcltech.DoctorPatientService.dto.SpecializationDto;
+import com.hcltech.DoctorPatientService.service.SpecializationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
