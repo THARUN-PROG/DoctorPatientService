@@ -1,8 +1,8 @@
-package com.hcltech.doctorPatientService.controller;
+package com.hcltech.DoctorPatientService.controller;
 
 
-import com.hcltech.doctorPatientService.dto.SpecializationDto;
-import com.hcltech.doctorPatientService.service.SpecializationService;
+import com.hcltech.DoctorPatientService.dto.SpecializationDto;
+import com.hcltech.DoctorPatientService.service.SpecializationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,17 +25,35 @@ public class SpecializationController {
         }
         return ResponseEntity.ok(result);
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<SpecializationDto> getById(@PathVariable("id") Integer id){
+        SpecializationDto result = specializationService.getOneById(id);
+        if (result==null){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(result);
+    }
     @PostMapping
     public ResponseEntity<SpecializationDto> create(SpecializationDto specializationDto){
-        specializationService.create(specializationDto);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        SpecializationDto result = specializationService.create(specializationDto);
+        if (result==null){
+            return ResponseEntity.internalServerError().build();
+        }
+        return new ResponseEntity(result,HttpStatus.CREATED);
     }
-    @GetMapping("/{id}")
-    public ResponseEntity<SpecializationDto> getById(@PathVariable Integer id){
-        return null;
+    @PutMapping
+    public ResponseEntity<SpecializationDto> update(SpecializationDto specializationDto){
+        SpecializationDto result = specializationService.update(specializationDto);
+        if (result==null){
+            return ResponseEntity.internalServerError().build();
+        }
+        return ResponseEntity.ok(result);
+
     }
+
     @DeleteMapping
     public ResponseEntity<Void> deleteById(@PathVariable Integer id){
+        specializationService.delete(id);
         return null;
     }
 
