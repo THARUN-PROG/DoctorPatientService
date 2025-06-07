@@ -1,6 +1,6 @@
-package com.hcltech.doctorpatientservice.dto;
+package com.hcltech.doctorpatientservice.DTO.doctordto;
 
-public class DoctorDTO {
+public class DoctorResponseDto {
     private String experience;
     private String qualification;
     private String specialist;
