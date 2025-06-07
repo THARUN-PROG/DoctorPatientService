@@ -1,8 +1,8 @@
-package com.hcltech.doctorPatientService.service;
+package com.hcltech.DoctorPatientService.service;
 
-import com.hcltech.doctorPatientService.dao.service.SpecializationDao;
-import com.hcltech.doctorPatientService.dto.SpecializationDto;
-import com.hcltech.doctorPatientService.model.Specialization;
+import com.hcltech.DoctorPatientService.dao.service.SpecializationDao;
+import com.hcltech.DoctorPatientService.dto.SpecializationDto;
+import com.hcltech.DoctorPatientService.model.Specialization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
